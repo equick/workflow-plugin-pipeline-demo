@@ -1,5 +1,5 @@
 def devQAStaging() {
-    env.PATH="${tool 'Maven 3.x'}/bin:${env.PATH}"
+    env.PATH="${tool 'M3'}/bin:${env.PATH}"
     stage 'Dev'
     sh 'mvn clean install package'
     archive 'target/x.war'
