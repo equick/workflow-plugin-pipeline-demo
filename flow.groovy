@@ -39,7 +39,7 @@ def production() {
 }
 
 def deploy(war, id) {
-    sh "! test -d /tmp/webapps && mkdir /tmp/webapps"
+    sh "test -d /tmp/webapps || mkdir /tmp/webapps"
     sh "cp ${war} /tmp/webapps/${id}.war"
 }
 
